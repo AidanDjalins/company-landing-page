@@ -8,9 +8,13 @@
 
 body {
     background-color: var(--background-color);
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'poppins', Courier, monospace;
 }
 
 /* Header */
@@ -62,21 +66,21 @@ header img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ensure it takes full width */
-    height: 50vh; /* Full viewport height */
-    margin-top: 19px;
+    width: 100%; 
+    min-height: 500px; 
+    padding-top: 20px;
 }
 
-.card {
+.about_card {
     display: flex;
-    width: 75%;
+    width: 90%;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-.text-section {
+.text_section {
     flex: 1;
     padding: 40px; 
     display: flex;
@@ -84,25 +88,211 @@ header img {
     justify-content: center;
 }
 
-.text-section h1 {
+.text_section h1 {
     margin: 0;
     font-size: 2rem; 
     color: #333;
 }
 
-.text-section p {
+.text_section p {
     margin: 20px 0 0; 
     font-size: 1.5rem; 
     color: #666;
 }
 
-.image-section {
+.image_section {
     flex: 1;
     background-color: #eee;
 }
 
-.image-section img {
+.image_section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Service - descripttion of the service provided */
+
+.service {
+    width: 100%;
+    min-height: 500px;
+    margin: auto;
+    padding-top: 70px;
+}
+
+.service h1 {
+    text-align: center;
+    color: var(--main-text);
+    font-size: 2.5rem;
+}
+
+.service_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service_card {
+    min-height: 300px;
+    width: 300px;
+    border: 2px groove gainsboro;
+    background-color: var(--primary-color);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.service_card img {
+    height: auto;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.service_card span {
+    color: var(--main-text);
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: bold;
+}
+
+/* Team - meet the team */
+
+.team {
+    width: 100%;
+    min-height: 500px;
+    margin: auto;
+    padding-top: 70px;
+}
+
+.team h1 {
+    text-align: center;
+    color: var(--main-text);
+    font-size: 2.5rem;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 40vw;
+    margin: auto;
+    gap: 3rem;
+}
+  
+.team-container > div:nth-child(odd) {
+    align-self: flex-end;
+    transform: translateX(-300px);
+}
+
+.team-container > div:nth-child(even) {
+    transform: translateX(300px);
+}
+
+.member_card {
+    display: flex;
+    background: var(--primary-color);
+    padding: 2rem;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    transition: all 0.9s ease-in-out;
+    border-radius: 10px;
+}
+
+.member_card img {
+    border-radius: 05%;
+    width: 35%;
+    height: 100%;
+}
+
+.card_content {
+    padding-left: 1rem;
+}
+
+.card_content h2 {
+    font-size: 1.5rem;
+    color: var(--main-text);
+}
+
+.card_content p {
+    font-size: 1rem;
+    color: var(--main-text);
+}
+
+.position {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.position::after {
+    content: "";
+    background: #ccc;
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    top: 25px;
+    left: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--main-text);
+    padding: 2rem 0;
+    font-family: "Merriweather Sans", sans-serif;
+    margin-top: 70px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+    min-width: 200px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--main-text);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--main-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--hover-color);
 }
